@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MonoGame\MonoGame.Framework\MonoGame.Framework.WindowsDX.csproj" />
+    <ProjectReference Include="..\TronBonne\TronBonne.csproj" />
+    <ProjectReference Include="..\twitchbot\twitchbot.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="NAudio">
+      <HintPath>..\..\..\OneDrive\Desktop\audio-wave-updater-1.0.4\1.0.4\NAudio.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
