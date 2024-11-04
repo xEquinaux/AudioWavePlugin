@@ -18,6 +18,7 @@ namespace AudioWavePlugin
 
 		public override void Initialize()
 		{
+			Wave.LoopCapture.StartRecording();
 		}
 
 		public override bool Load()
@@ -40,20 +41,14 @@ namespace AudioWavePlugin
 
 		public override void Update()
 		{
-			if (Button[0].LeftClick())
-			{
-				if (Wave.LoopCapture.CaptureState == CaptureState.Stopped)
-				{ 
-					Wave.LoopCapture.StartRecording();
-				}
-				else Wave.LoopCapture.StopRecording();
-			}
 		}
 		
+		bool flag = false;
 		public override void Draw(SpriteBatch sb)
 		{
 			if (Wave.LoopCapture.CaptureState == CaptureState.Capturing)
 			{ 
+				Task.WaitAll(Task.Delay(12));
 				var rect = Game1.Instance.Window.ClientBounds;
 				Bitmap bmp = Wave.Instance.Display(rect.Width, rect.Height);
 				var tex = Pipeline.BitmapToTex2D(bmp, Game1.Instance.GraphicsDevice);

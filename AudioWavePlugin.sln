@@ -5,6 +5,10 @@ VisualStudioVersion = 17.10.34902.84
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AudioWavePlugin", "AudioWavePlugin.csproj", "{FA6B2CD3-DCBA-4384-B377-E0103757F161}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TronBonne", "..\TronBonne\TronBonne.csproj", "{788E2C88-E9EB-4651-8958-D791265EE16C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MonoGame.Framework.WindowsDX", "..\MonoGame\MonoGame.Framework\MonoGame.Framework.WindowsDX.csproj", "{7D52B340-1667-4915-BCFA-BB5A0413388B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{FA6B2CD3-DCBA-4384-B377-E0103757F161}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA6B2CD3-DCBA-4384-B377-E0103757F161}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA6B2CD3-DCBA-4384-B377-E0103757F161}.Release|Any CPU.Build.0 = Release|Any CPU
+		{788E2C88-E9EB-4651-8958-D791265EE16C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{788E2C88-E9EB-4651-8958-D791265EE16C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{788E2C88-E9EB-4651-8958-D791265EE16C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{788E2C88-E9EB-4651-8958-D791265EE16C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D52B340-1667-4915-BCFA-BB5A0413388B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D52B340-1667-4915-BCFA-BB5A0413388B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D52B340-1667-4915-BCFA-BB5A0413388B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D52B340-1667-4915-BCFA-BB5A0413388B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

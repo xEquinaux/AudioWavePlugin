@@ -3,7 +3,6 @@ using NAudio.Dsp;
 using NAudio.Wave;
 using System.Diagnostics;
 using System.Drawing;
-using System.Windows.Media;
 using Color = System.Drawing.Color;
 
 namespace AudioWavePlugin
@@ -282,11 +281,11 @@ namespace AudioWavePlugin
             }
             return new Bitmap(width, height);
         }
+        PointF[] oldPoints = new PointF[] { };
         private Bitmap GenerateImage(int width, int height)
         {
-            PointF[] oldPoints = new PointF[] { };
             int verticalOffY = 15;    //  For moving the entire graph vertically
-            int stride = width * ((PixelFormats.Bgr24.BitsPerPixel + 7) / 8);
+            int stride = width * ((/*PixelFormats.Bgr24.BitsPerPixel*/24 + 7) / 8);
             Bitmap bmp = new Bitmap(width, height);
             {
                 using (Graphics graphic = Graphics.FromImage(bmp))
@@ -409,8 +408,15 @@ namespace AudioWavePlugin
                         //        graphic.DrawLines(pen, points);
                         //    else graphic.DrawCurve(pen, points);
                         //}
-                        graphic.DrawCurve(pen, points);
-                        oldPoints = points;
+                        if (oldPoints.Length > 1 && points[0].Y == height / 2)
+                        {
+                            graphic.DrawCurve(pen, oldPoints);
+                        }
+                        else
+                        { 
+                            graphic.DrawCurve(pen, points);
+                            oldPoints = points;
+                        }
                     }
                 }
                 //  Render to WPF ImageSource object
